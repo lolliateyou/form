@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Fair Registration Form</title>
+    <style>
+        body { font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;}
+        .container {
+            max-width: 500px;
+            margin: auto;
+            background:#f4f77e;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);}
+        h2 {color:#590303;
+            font-family:Bell MT;
+            text-align: center;}
+        label {
+            display: block;
+            margin-bottom: 5px;}
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;}
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>KJSP BOOKBANK RESGISTRATION</h2>
+    <form action="/submit_registration" method="POST">
+        
+        <label for="name">FULL NAME:</label>
+        <input type="text" id="name" name="name" required>
+
+       <label for="enrollment no">ENROLLMENT NO:</label>
+        <input type="enrollment no" id="enrollment no" name="enrollment no" required>
+
+        <label for="email">EMAIL ADDRESS:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">PHONE NUMBER</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <label for="NAME OF BOOK TO BE ISSUED">Name of Book to be issued</label>
+        <input type="text" id="book name" name="book name">
+
+        <label for="DURATION SLOT">DURATION SLOT:</label>
+        <select id="DURATION SLOT" name="DURATION SLOT" required>
+            <option value="" disabled selected>Select your slott</option>
+            <option value="3 DAYS">3 DAYS</option>
+            <option value="5 DAYS">5 DAYS</option>
+            <option value="7 DAYS">7 DAYS</option>
+            <option value="14 DAYS">14 DAYS</option></select>
+
+        <label for="DEPARTMENT">YOUR DEPARTMENT:</label>
+        <select id="DEPARTMENT" name="DEPARTMENT" required>
+            <option value="" disabled selected>Select your department</option>
+            <option value="Computer engineering">Computer engineering</option>
+            <option value="Mechanical engineering">Mechanical engineering</option>
+            <option value="Electrical engineering">Electrical engineering</option>
+            <option value="Industrial/Electronics engineering">Industrial/Electronics engineering</option>
+        </select>
+
+        <label for="message">REMARK:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+</body>
+</html>
